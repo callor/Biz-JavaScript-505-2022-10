@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+  </body>
+  <script>
+    const divs = document.querySelectorAll("div");
+    divs[0].innerText = "DIV 1";
+    divs[1].innerText = "DIV 2";
+    divs[2].innerText = "DIV 3";
+
+    const div0Style = divs[0].style;
+    div0Style.borderColor = "blue";
+    div0Style.borderWidth = "1px";
+    div0Style.borderStyle = "solid";
+
+    // innerText : tag 를 그대로 본문에 노출
+    divs[1].innerText = "대한민국만세</br>우리나라만세";
+
+    // innerHTML : tag 의 성질을 반영하여 문자열 출력
+    // escape 반영 하기
+    divs[1].innerHTML = "대한민국만세<br />우리나라만세";
+
+    divs[1].style.borderColor = "green";
+    divs[1].style.borderWidth = "1px";
+    divs[1].style.borderStyle = "solid";
+  </script>
+</html>
