@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="num1">0</p>
+    <p id="num2">1</p>
+    <p id="num3">2</p>
+    <p id="num4">3</p>
+    <p id="num5">4</p>
+  </body>
+  <script>
+    /**
+     * doc 화면에 5개의 p tag 가 있다
+     * p tag 2 번 요소에 대한민국만세
+     * p tag 4 번 요소에 우리나라만세
+     *
+     * 가 나타나 도록 JS 코드를 작성
+     */
+
+    const ptags = document.querySelectorAll("p");
+    ptags[2].innerText = "대한민국만세";
+    ptags[4].innerText = "우리나라만세";
+  </script>
+</html>
