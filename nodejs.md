@@ -9,3 +9,6 @@
 * cmd 창을 관리자 권한으로 실행해야 한다
 * npm 도구를 Update 하기  
 ```npm install -g npm``` 을 실행한다
+* npm : Nodejs Package Manger, NodeJS 의 plugin, 기타 도구를 설치하는 프로그램
+* Server 애플리케이션 실행 도구 설치하기  
+```npm install -g nodemon```
