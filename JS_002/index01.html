@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <!-- 
+    head tag :
+    문서의 보이지 않는 설정등을 하는 영역
+    title tag 는 browser 의 title 부분에 제목을 표현한다
+
+    meta charset
+    보여지는 화면의 글자 코드와 관련있는 항목
+    기본값으로 UTF-8 로 설정하면 된다
+
+    meta name="viewport"
+    화면을 보는 장치(PC, 스마트폰, 태블릿)에 관계없이
+    같은 크기의 화면으로 보게 하는 설정
+
+    -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      span {
+        color: blue;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="num1" placeholder="num1 입력" />
+    <span> + </span>
+    <input id="num2" placeholder="num2 입력" />
+    <span> = </span>
+    <span id="sum"></span>
+    <button id="btnCalc">계산</button>
+  </body>
+  <script src="js/main01.js"></script>
+</html>

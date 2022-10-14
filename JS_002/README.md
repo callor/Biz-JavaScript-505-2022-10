@@ -10,3 +10,12 @@
 const num1 = 100
 let num2 = 100
 ```
+
+- HTML tag 요소를 변수에 보관하기
+- 변수를 통하여 pTag의 속성(property)에 접근할 수 있다
+
+```
+const pTag = document.querySelector("p")
+pTag.innerText = "우리나라"
+pTag.style.color = "blue"
+```
