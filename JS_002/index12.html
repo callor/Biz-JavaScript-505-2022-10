@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+  </head>
+  <body>
+    <form id="form" onsubmit="return false">
+      <input id="age" placeholder="나이를 입력하세요" />
+    </form>
+    <div>
+      <span id="result"></span>
+    </div>
+  </body>
+  <script>
+    /**
+     * 나이를 입력하고 Enter 를 눌렀을때
+     * 다음 조건에 맞는 결과를 span tag 에 표시
+     *
+     * 1. 15세 미만이면 : 대상 아님
+     * 2. 15 ~ 30세 : 화이자
+     * 3. 31 ~ 60세 : 모더나
+     * 4. 61 세 이상 : 제네카
+     */
+    const form = document.querySelector("#form");
+    const inputAge = document.querySelector("#age");
+    const spanResult = document.querySelector("#result");
+
+    form.addEventListener("submit", () => {
+      const txtAge = inputAge.value;
+      if (txtAge < 15) {
+        spanResult.innerText = "대상아님";
+      } else if (txtAge >= 15 && txtAge <= 30) {
+        spanResult.innerText = "화이자";
+      } else if (txtAge >= 31 && txtAge <= 60) {
+        spanResult.innerText = "모더나";
+      } else {
+        spanResult.innerText = "제네카";
+      }
+      // 처리가 끝난 다음에 input box 의 문자열을 clear
+      inputAge.value = "";
+
+      // input box 를 마우스로 클릭한 것처럼 실행하라
+      inputAge.focus();
+    });
+
+    /**
+     * form tag 의 submit event 를 처리할때 주의사항
+     * form tag 의 submit event 는 고유의 성질을 가지고 있다
+     * 그것은 모든 처리가 끝나면 input 에 입력된 데이터를
+     * 서버로 전송을 하면서
+     * 현재 화면을 refresh 한다
+     *
+     * 만약 sumbit event 에서 화면에 무엇인가 표현하는 코드를
+     * 작성할때는 form 의 원래 submit 성질을 무력화 시켜주어야 한다
+     * 그 방법은 여러가지가 있을 수 있는데
+     * form tag 에 onsumbit="return false" 속성을 추가하므로써
+     * 매우 간단히 처리할수 있다
+     *
+     */
+  </script>
+</html>

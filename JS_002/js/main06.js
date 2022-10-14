@@ -15,10 +15,24 @@ btn.addEventListener("click", () => {
    */
   // if(txtNum === "")
   if (!txtNum) {
+    // 가
     alert("값을 입력하세요");
   } else if (Number(txtNum) <= 0) {
+    // 나
     alert("0 보다 큰값을 입력하세요");
   } else {
+    // 다
     alert(Number(txtNum) ** 2);
   }
+  /**
+   * 다중 if, 중첩 if, 다중 조건, 중첩 조건
+   * 1. "가" 조건문이 실행되어 조건이 참인가 검사
+   *    참이면(txtNum === "") "값을..." alert 띄우기
+   * 2. "가" 조건문이 참이 아닌경우
+   *    "나" 조건문이 실행되어 조건이 참인가 검사
+   *    참이면(txtNum <= 0) "0 보다 큰..." alert 띄우기
+   * 3. "가" 조건도 참이 아니고,
+   *    "나" 조건도 참이 아니면
+   *    txtNum 값을 제곱하여 alert 띄우기
+   */
 });

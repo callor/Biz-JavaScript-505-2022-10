@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      button {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="return false">
+      <select id="op">
+        <option value="+">덧셈</option>
+        <option value="-">뺄셈</option>
+        <option value="*">곱셈</option>
+        <option value="!">나눗셈</option>
+      </select>
+      <input id="num1" placeholder="정수1" />
+      <input id="num2" placeholder="정수2" />
+      결과 : <span id="result"></span>
+      <button></button>
+    </form>
+  </body>
+  <script>
+    const form = document.querySelector("form");
+    const inputNum1 = document.querySelector("#num1");
+    const inputNum2 = document.querySelector("#num2");
+    const result = document.querySelector("#result");
+    const op = document.querySelector("#op");
+
+    op.focus();
+
+    form.addEventListener("submit", () => {
+      const intNum1 = Number(inputNum1.value);
+      const intNum2 = Number(inputNum2.value);
+      const txtOp = op.value;
+
+      if (txtOp === "+") {
+        result.innerText = intNum1 + intNum2;
+      } else if (txtOp === "-") {
+        result.innerText = intNum1 - intNum2;
+      } else if (txtOp === "*") {
+        result.innerText = intNum1 * intNum2;
+      } else if (txtOp === "!") {
+        result.innerText = intNum1 / intNum2;
+      }
+    });
+  </script>
+</html>

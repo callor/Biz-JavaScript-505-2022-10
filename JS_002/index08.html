@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const num1 = 0;
+  const num2 = NaN; // NaN : Not a Number
+  const txt1 = "";
+  const txt2 = null;
+  const txt3 = undefined;
+
+  /*
+    JS 에서는 어떤 변수에 0 이 보관(저장) 되어 있을때
+    if() 문에서 if( !변수 ) 와 같이 명령문을 사용하면
+    변수에 0 이 저장되어 있느냐 라고 묻는 것이다
+  */
+  if (!num1) {
+    alert("Num1 is Not");
+  }
+  /*
+    num2 에 보관된 값이 NaN 이냐?
+  */
+  if (!num2) {
+    alert("Num2 is NaN");
+  }
+  /*
+    txt 변수에 "" 값이 보관되어 있냐?
+  */
+  if (!txt1) {
+    alert("Txt1 is '' ");
+  }
+
+  if (!txt2) {
+    alert("Txt2 is Null");
+  }
+
+  if (!txt3) {
+    alert("Txt3 is undefined");
+  }
+</script>
