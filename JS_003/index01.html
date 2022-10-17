@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+  </head>
+  <body>
+    <!--
+        form 를 사용할때 내부에 button 있으면
+        button 클릭하면 자동으로 form 의 submit 이 작동한다
+        form submit 이 작동하지 않도록 하는 방법에는 여러기법이 있는데
+        form 에 button 이 있을때는 button 의 type 을 button 으로 설정한다
+        이때는 form 의 submit event 를 설정하지 않아야 한다
+
+        form 의 submit event 를 사용하고자 할때는
+        form tag 에 onsubmit="resunt false" 를 설정해야 한다
+    -->
+    <form>
+      <input id="num1" placeholder="숫자1" />
+      <input id="num2" placeholder="숫자2" />
+      <button type="button">계산</button>
+    </form>
+    <div id="result"></div>
+  </body>
+  <script src="js/main01.js"></script>
+</html>
