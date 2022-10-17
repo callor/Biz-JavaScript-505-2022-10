@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      #result {
+        display: none;
+      }
+
+      span {
+        display: inline-block;
+        width: 50px;
+        text-align: right;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input id="num1" placeholder="숫자1" />
+      <input id="num2" placeholder="숫자2" />
+      <button type="button">계산</button>
+    </form>
+    <div id="result">
+      <h1>결과</h1>
+      <div>
+        <span class="num1"></span> + <span class="num2"></span> =
+        <span class="result"></span>
+      </div>
+      <div>
+        <span class="num1"></span> - <span class="num2"></span> =
+        <span class="result"></span>
+      </div>
+      <div class="num">
+        <span class="num1"></span> x <span class="num2"></span> =
+        <span class="result"></span>
+      </div>
+      <div>
+        <span class="num1"></span> ÷ <span class="num2"></span> =
+        <span class="result"></span>
+      </div>
+    </div>
+  </body>
+  <script src="js/main10.js"></script>
+</html>
