@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+  </head>
+  <body></body>
+  <script>
+    let num1 = 0;
+    /**
+     * 후행 증가 연산자
+     * 먼저 앞에서 저장된 num1 의 값이 화면에 출력되고
+     * 그리고 num1 의 값을 1 증가시킨다
+     */
+    document.writeln(num1++);
+    // 위의코드는 다음의 두번의 코드가 실행되는 것과 같다
+    document.writeln(num1);
+    num += 1;
+
+    document.writeln(num1++);
+    document.writeln(num1++);
+    document.writeln(num1++);
+    document.writeln(num1++);
+    document.writeln("<br/>");
+
+    num1 = 0;
+    /**
+     * 선행 증가 연산자
+     * num1 변수에 저장된 값에 1을 증가시키고
+     * 그리고 결과를 화면에 출력
+     */
+    document.writeln(++num1);
+    // 위의 코드는 다음의 두줄의 코드와 같다
+    num1 += 1;
+    document.writeln(num1);
+
+    document.writeln(++num1);
+    document.writeln(++num1);
+    document.writeln(++num1);
+    document.writeln(++num1);
+    document.writeln("<br/>");
+
+    num1 = 0;
+    /**
+     * 먼저 num1 += 1 연산이 수행되고
+     * 연산 결과가 담긴 num1 변수의 값이
+     * 화면에 출력된다
+     */
+    document.writeln((num1 += 1));
+    document.writeln((num1 += 1));
+    document.writeln((num1 += 1));
+    document.writeln((num1 += 1));
+    document.writeln((num1 += 1));
+  </script>
+</html>
