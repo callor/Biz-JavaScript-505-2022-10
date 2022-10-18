@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      div {
+        width: 50%;
+
+        /* div box 내부에 있는 text, inline tag 를 정렬 */
+        text-align: center;
+        /* div box 의  4방향(상, 하, 오른쪽, 왼쪽) 외부 여백 */
+        margin: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        /* 
+        block tag 많이 사용하는 기법 
+        상하 여백을 지정하고 화면 중앙에 box 를
+        배치하는 기법
+        */
+        margin: 10px auto;
+
+        /* div box 의 4방향의 내부 여백(마치 공기 주입) */
+        padding: 10px;
+      }
+
+      div#content {
+        border: 1px solid #0000ff;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #0000ff;
+      }
+
+      button {
+        margin: 5px;
+        border-radius: 5px;
+        /* 
+        margin, padding 을 설정할때
+        고정값으로 px 단위를 사용하지만
+        rem, em 단위를 사용하는 것을 권장한다
+        이 단위는 화면에 보이는 text 의 크기에 따라
+        비율적으로 여백을 지정할수 있다
+        1(r)em : 글자와 1대 1크기
+        0.5(r)em : 글자 대 여백 = 1 : 0.5
+        1.5(r)em : 글자 대 여백 = 1 : 1.5
+        */
+        padding: 0.5em 1.5em;
+
+        border: none;
+        /* 버튼을 클릭했을때 나타나는 희미한 실선 */
+        outline: none;
+        cursor: pointer;
+      }
+
+      /* 
+      :nth-of-type(순번)
+      화면에 보이는 button 중에서 1번째로 보이는
+      button 의 style 지정
+      */
+      button:nth-of-type(1) {
+        background-color: red;
+        color: white;
+      }
+      button:nth-of-type(2) {
+        background-color: blue;
+        color: white;
+      }
+      button:nth-of-type(3) {
+        background-color: yellow;
+      }
+
+      /* 
+      hover
+      css 에서 가상 클래스
+      js 를 사용하여 event 등을 수행했던 것을
+      css 에서 할수 있도록 만들어주는 확장 도구
+      hover = tag 에 마우스가 올라갔을때
+      */
+      button:hover {
+        box-shadow: 2px 2px 2px 2px #ddd;
+        background-color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">안녕하세요</div>
+    <div class="btn_box">
+      <button id="btnRed">Red</button>
+      <button id="btnBlue">Blue</button>
+      <button id="btnYellow">Yellow</button>
+    </div>
+  </body>
+  <script src="js/main02.js"></script>
+</html>
