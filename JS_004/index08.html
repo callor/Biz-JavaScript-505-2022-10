@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      form {
+        width: 70%;
+        margin: 20px auto;
+      }
+
+      fieldset {
+        border: 1px solid rgb(86, 69, 135);
+        border-radius: 20px;
+        padding: 16px 10px;
+      }
+
+      legend {
+        text-align: center;
+        padding: 20px;
+        color: blue;
+        font-size: 16pt;
+        font-weight: bold;
+      }
+
+      form label,
+      form input {
+        display: inline-block;
+        margin: 5px;
+        padding: 8px;
+      }
+
+      form label {
+        width: 30%;
+        text-align: right;
+        color: blueviolet;
+        font-weight: bold;
+      }
+      form input {
+        width: 50%;
+        outline: none;
+        border-radius: 5px;
+      }
+
+      form input:hover {
+        box-shadow: 2px 2px 2px 2px black;
+      }
+
+      form input:focus {
+        background-color: #eee;
+      }
+
+      form button {
+        padding: 12px 16px;
+        margin: 5px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+      }
+
+      form button:hover {
+        box-shadow: 2px 2px 2px 2px #333;
+      }
+
+      div.btn_box {
+        text-align: right;
+        width: 82%;
+      }
+
+      div.btn_box button:nth-of-type(1) {
+        background-color: blue;
+        color: white;
+      }
+      div.btn_box button:nth-of-type(2) {
+        background-color: olivedrab;
+        color: white;
+      }
+      div.btn_box button:nth-of-type(3) {
+        background-color: green;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>회원가입</legend>
+        <div>
+          <label for="username">아이디</label
+          ><input id="username" name="username" />
+        </div>
+        <div>
+          <label for="password">비밀번호</label
+          ><input id="password" name="password" type="password" />
+        </div>
+        <div>
+          <label for="re_password">비밀번호 확인</label
+          ><input id="re_password" type="password" />
+        </div>
+        <div>
+          <label for="nickname">닉네임</label
+          ><input id="nickname" name="nickname" />
+        </div>
+        <div>
+          <label for="tel">전화번호</label
+          ><input id="tel" name="tel" type="tel" />
+        </div>
+        <div class="btn_box">
+          <button type="button" class="btn_submit">회원가입</button>
+          <button type="reset">다시작성</button>
+          <button type="button">처음으로</button>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+  <script src="js/main08.js"></script>
+</html>

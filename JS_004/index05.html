@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      /*
+        화면 layout 을 구현할때
+        초기화 해야 하는 코드
+        이 부분을 생략하면 layout 구현을 할때
+        원하는 모양을 얻기 어렵다
+        */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        background-color: rgb(76, 209, 76);
+        padding: 1.3em;
+        color: white;
+        text-align: center;
+        text-shadow: 1px 1px 1px black;
+      }
+
+      nav {
+        background-color: blue;
+        color: white;
+      }
+
+      ul {
+        list-style-type: square;
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        /*
+        a tag 를 감싸는 nav 를 만들때
+        li tag 에 padding 주면, 마우스 반응을
+        하지 않는 영역이 발생한다
+        이러한 현상을 방지 하기 위하여
+        a tag 에 padding 을 주는데
+        a tag 는 inline tag 여서 padding 이 적용되지 
+        않는다
+        a tag 에 padding 을 적용하려면
+        display 를 inline-block으로 설정해야 한다
+        */
+        display: inline-block;
+        padding: 12px 16px;
+      }
+
+      li {
+        display: inline-block;
+      }
+
+      li:nth-of-type(1) {
+        margin-left: 20px;
+      }
+
+      li:hover {
+        background-color: #aaa;
+      }
+
+      article {
+        border: 1px solid #aaa;
+        width: 50%;
+        margin: 10px auto;
+      }
+
+      article:nth-of-type(1) {
+        border: 5px solid blue;
+      }
+      article:nth-of-type(2) {
+        padding: 20px;
+      }
+      article:nth-of-type(1) {
+        padding: 50px;
+      }
+
+      footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>나의 홈페이지</h1>
+      <p>내 홈페이지에 오신것을 환영합니다</p>
+    </header>
+    <!--
+        a tag(Anchor, 닻)
+        Content 에 Hyper Text 효과를 부여하는 tag
+    -->
+    <nav>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="https://google.com" target="_new">구글</a></li>
+        <li><a href="https://naver.com" target="_new">네이버</a></li>
+        <li><a href="https://daum.net" target="_new">다음</a></li>
+        <li><a href="">About</a></li>
+      </ul>
+    </nav>
+    <section>
+      <article>우리나라만세</article>
+      <article>대한민국만세</article>
+      <article>Republic of Korea</article>
+      <article>우리나라만세</article>
+      <article>우리나라만세</article>
+      <article>우리나라만세</article>
+      <article>우리나라만세</article>
+      <article>우리나라만세</article>
+    </section>
+    <footer>
+      <address>CopyRight &copy; callor@callor.com</address>
+    </footer>
+  </body>
+</html>
