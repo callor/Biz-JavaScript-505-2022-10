@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      div {
+        padding: 20px;
+        margin: 10px;
+      }
+      div#div1 {
+        border: 1px solid green;
+      }
+      div#div2 {
+        border: 1px solid blue;
+      }
+      div#div3 {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="div2">
+        <div id="div3">클릭하세요</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const divParent = document.querySelector("#div1");
+    divParent.addEventListener("click", (e) => {
+      const target = e.target;
+      alert("클릭된 box : " + target.id);
+    });
+  </script>
+</html>

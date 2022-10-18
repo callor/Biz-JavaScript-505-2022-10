@@ -7,14 +7,6 @@ btnBox?.addEventListener("click", (tag) => {
   // 최초로 클릭된 tag 가 button 이면
   if (target.tagName === "BUTTON") {
     const text = target.innerText;
-    if (text === "Red") {
-      content.style.backgroundColor = "red";
-    }
-    if (text === "Blue") {
-      content.style.backgroundColor = "blue";
-    }
-    if (text === "Yellow") {
-      content.style.backgroundColor = "yellow";
-    }
+    content.style.backgroundColor = text;
   }
 });
