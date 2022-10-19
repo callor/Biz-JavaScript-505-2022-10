@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      table {
+        border: 1px solid blue; /* table 바깥쪽 태두리 */
+        /* cell 과 cell 사이의 여백 조정 */
+        border-collapse: separate; /* 기본값 */
+        /* 
+        border-collapse 가 separate 일때 
+        border-spacing 을 설정하면 셀 간격이 변한다
+        collapse 일때는 적용되지 않는다
+        */
+        border-spacing: 20px;
+        border-collapse: collapse; /* 여백 없애기 */
+
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid green;
+        padding: 5px;
+      }
+
+      td.age {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <colgroup>
+        <col width="10%" />
+        <col width="10%" />
+        <col width="30%" />
+        <col width="0" />
+        <col width="0" />
+        <col width="0" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>전화번호</th>
+          <th>주소</th>
+          <th></th>
+          <th>비고</th>
+          <th>취미</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>이몽룡</td>
+          <td>서울특별시</td>
+          <td>010-111-1111</td>
+          <td class="age">33</td>
+          <td colspan="2">등산</td>
+        </tr>
+        <tr>
+          <td>성춘향</td>
+          <td>전북 남원시</td>
+          <td>064-111-1111</td>
+          <td class="age"></td>
+          <td colspan="2">여행</td>
+        </tr>
+        <tr>
+          <td rowspan="2">임꺽정</td>
+          <td>함경도 함흥</td>
+          <td>000-11111</td>
+          <td class="age"></td>
+          <td colspan="2">격투기</td>
+        </tr>
+        <tr>
+          <td>평양시</td>
+          <td>000-2222</td>
+          <td class="age">45</td>
+          <td colspan="2">격투기</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
