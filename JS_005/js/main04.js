@@ -1,4 +1,5 @@
 const spans = document.querySelectorAll("span");
+// index 객체
 const spanIndex = {
   이름: 0,
   주소: 1,
