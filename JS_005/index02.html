@@ -11,6 +11,30 @@
         margin: 0;
       }
 
+      /*
+      문서의 보이는 크기를
+      view port 의 100%로 설정하기
+      */
+      html {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      /* 
+      html 문서가 보이는 범위내에서
+      body 를 100% 로 설정하기
+      */
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        /* 
+        flex item 들을 세로 방향으로 배치하기 
+        기본값은 row
+        */
+        flex-direction: column;
+      }
+
       header {
         background-color: greenyellow;
         padding: 1.3em;
@@ -48,6 +72,79 @@
       nav.main_nav li:nth-of-type(4) {
         margin-left: auto;
       }
+      section.main_section {
+        border: 1px solid blue;
+        padding: 10px;
+        flex: 1;
+        display: flex;
+      }
+
+      section.main_section article {
+        border: 1px solid red;
+        margin: 5px;
+      }
+
+      section.main_section aside {
+        flex: 1;
+        margin: 5px;
+        border: 1px solid green;
+      }
+      section.main_section article {
+        flex: 3;
+      }
+
+      footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+      }
+      div.search {
+        border: 1px solid #333;
+        width: 70%;
+        display: flex;
+      }
+
+      div.search label,
+      div.search input {
+        padding: 8px;
+        margin: 5px;
+        display: inline-block;
+      }
+
+      div.search label {
+        width: 30%;
+        text-align: right;
+        color: blue;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+
+      div.search input {
+        width: 50%;
+        outline: none;
+        border-radius: 5px;
+      }
+
+      div.search button {
+        padding: 8px 16px;
+        background-color: blueviolet;
+        color: white;
+        border-radius: 5px;
+        margin: 3px;
+        white-space: nowrap;
+      }
+
+      /*
+      flex-box(display:flex 설정된 tag)에
+      justify-content와 align-items 를 center 로
+      설정하면
+      내부의 flex-item 들이 상하 좌우 중앙 정렬을 한다
+      */
+      article.search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
@@ -65,5 +162,20 @@
         <li>회원가입</li>
       </ul>
     </nav>
+    <section class="main_section">
+      <aside>Side Content</aside>
+      <article class="search">
+        <div class="search">
+          <label>검색어</label>
+          <input name="search" placeholder="검색어를 입력하세요" />
+          <button class="search">검색</button>
+        </div>
+      </article>
+      <aside>Side Content</aside>
+    </section>
+    <footer>
+      <address>CopyRight &copy; callor@callor.com</address>
+    </footer>
   </body>
+  <script src="js/main02.js"></script>
 </html>
