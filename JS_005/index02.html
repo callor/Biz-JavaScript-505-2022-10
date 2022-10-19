@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      header {
+        background-color: greenyellow;
+        padding: 1.3em;
+        color: white;
+        text-align: center;
+        text-shadow: 1px 1px 1px #333;
+      }
+      nav {
+        background-color: blue;
+        color: white;
+      }
+
+      /* nav.main_nav 가 포함하고 있는 ul tag */
+      nav.main_nav ul {
+        list-style: none;
+        display: flex;
+      }
+
+      nav.main_nav li {
+        padding: 10px 16px;
+        cursor: pointer;
+      }
+
+      nav.main_nav li:nth-of-type() {
+        margin-left: 20px;
+      }
+      /* 
+      flex-item 의 margin-left 를 auto 로 설정하면
+      그 item 부터 오른쪽으로 
+      정렬되는 효과를 낼수 있다
+      */
+      nav.main_nav li:nth-of-type(5) {
+        margin-left: auto;
+      }
+      nav.main_nav li:nth-of-type(4) {
+        margin-left: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>검색엔진</h1>
+      <p>구글, 네이버, 다음 검색을 구현한다</p>
+    </header>
+    <nav class="main_nav">
+      <ul>
+        <li>Home</li>
+        <li>구글</li>
+        <li>네이버</li>
+        <li>다음</li>
+        <li>로그인</li>
+        <li>회원가입</li>
+      </ul>
+    </nav>
+  </body>
+</html>
