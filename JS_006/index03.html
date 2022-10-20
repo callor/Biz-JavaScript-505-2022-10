@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      /*
+      전체화면을 차지하는 layout 을 만들때
+      전체화면에 대한 기준을 만드는 것
+      vw, vh : 화면에 보이는 view port 를 기준으로
+      배율로 width, height 를 적용하는 방법
+      % 를 사용하여 width, height 를 적용하면
+      장치에 따라서 화면을 벗어나는 경우가 있다
+      html 문서에 최초로 100vw, 100vh 를 적용하여
+      장치 내에서 화면을 구현할수 있도록 하는 코드
+      */
+      html {
+        width: 100vw;
+        height: 100vh;
+      }
+      /* 
+      body 에 width와 height 를 적용하려면
+      먼저 html 에 width와 height 를 적용해 주어야 한다
+      */
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      /* 
+      selector, selctor
+      다수의 selector 에 공통 style 을 적용할때
+      */
+      table,
+      div {
+        width: 80%;
+        margin: 10px auto;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        /* tag에 표현하는 text 를 한라인으로 고정하기 */
+        white-space: nowrap;
+        padding: 5px;
+        text-align: center;
+      }
+      div {
+        border: 1px solid #aaa;
+      }
+
+      /* 
+      div box 중에서 class 가 input_box 인 요소만 
+      */
+      div.input_box {
+        display: flex;
+      }
+
+      /* 
+      selector1 [빈칸] selector2
+      selecotor1 이 감싸고 있는 
+      selector2 에 적용하기
+      다른 곳에 있는 selector2 에는 적용하지 않기
+      */
+      div.input_box input {
+        flex: 1;
+        padding: 8px;
+        margin: 5px;
+      }
+
+      div.input_box button {
+        padding: 12px 16px;
+        margin: 5px;
+        border: none;
+        outline: none;
+        background-color: blue;
+        color: white;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="score">
+      <thead>
+        <tr>
+          <th>학번</th>
+          <th>이름</th>
+          <th>국어</th>
+          <th>영어</th>
+          <th>수학</th>
+          <th>총점</th>
+          <th>평균</th>
+        </tr>
+      </thead>
+      <tbody class="score"></tbody>
+    </table>
+    <div class="input_box">
+      <input name="sc_num" type="text" placeholder="학번" />
+      <input name="sc_name" type="text" placeholder="이름" />
+      <input name="sc_kor" type="number" placeholder="국어" />
+      <input name="sc_math" type="number" placeholder="수학" />
+      <input name="sc_eng" type="number" placeholder="영어" />
+      <button class="add">추가</button>
+    </div>
+  </body>
+  <script src="js/main02.js"></script>
+</html>
