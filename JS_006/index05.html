@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      html {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        /* body 의 tag 들을 세로방향으로 배치하기 */
+        flex-direction: column;
+      }
+
+      header {
+        background-color: rgb(91, 214, 91);
+        color: white;
+        text-shadow: 1px 1px 1px black;
+        text-align: center;
+        /*
+        (r)em : 주변의 text 글꼴 크기에 따라 비율적으로
+        크기를 조절하기
+        1(r)em : 폰트크기와 1:1 로 대응
+        1.2em : 폰트크기 : padding = 1:1.2 로 대응
+        */
+        padding: 1.2em;
+        /*
+        color를 지정하는 방법
+        16진수 : #RGB = #000000 ~ #FFFFFF
+        컬러이름 : red, blue, yellow
+        10진수 : rgb(r, g, b) r, g, b = 0 ~ 255
+        10진수 알파 : rgba(r, g, b, a) r, g, b = 0 ~ 255,
+                a 0 ~ 1
+                알파 : 색상의 투명도를 지정한다 0 ~ 1까지
+
+        */
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6);
+      }
+
+      /*
+      body 에 flex, flex-direction:column 이 적용된 상태에서
+      section tag 에 flex 항목을 1로 설정하면
+      나머 항목이 상단과 하단으로 밀착되어 전체화면 layout 이
+      만들어진다
+      */
+      section.main {
+        flex: 1;
+      }
+
+      /*
+      tag 에 body 와 addr 라는 class 가 같이
+      지정되어 있는 경우
+
+      class 를 사용하여 여러종류의 tag 에 공통 style 지정하기
+      */
+      .body.addr {
+        width: 60%;
+        margin: 10px auto;
+      }
+
+      /* table 에 class 가 addr 이 설정된 항목만 */
+      table.addr {
+        border-collapse: collapse;
+      }
+
+      table.addr td,
+      table.addr th {
+        text-align: left;
+        white-space: nowrap;
+        /* 상 오 하 왼, Top Right Bottom left */
+        padding: 5px 5px 5px 10px;
+        border-bottom: 1px solid #bbb;
+        border-top: 1px solid #bbb;
+      }
+
+      div.addr {
+        display: flex;
+      }
+      div.addr input,
+      div.addr button {
+        border-radius: 5px;
+        margin: 5px;
+      }
+      div.addr input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #bbb;
+        outline: none;
+      }
+      div.addr input:hover {
+        background-color: #eee;
+      }
+      div.addr input:focus {
+        background-color: #bbb;
+      }
+
+      div.addr button {
+        padding: 10px 12px;
+        background-color: blue;
+        color: white;
+        border: none;
+        outline: none;
+      }
+      div.addr button:hover {
+        background-color: #ccc;
+        color: blue;
+      }
+
+      footer {
+        background-color: #bbb;
+        font-size: 8px;
+        text-align: center;
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>나의 친구들</h1>
+      <p>웹 브라우저를 이용한 주소록</p>
+    </header>
+    <section class="main">
+      <table class="body addr">
+        <thead>
+          <tr>
+            <th>이름</th>
+            <th>주소</th>
+            <th>전화번호</th>
+          </tr>
+        </thead>
+        <tbody class="addr"></tbody>
+      </table>
+      <div class="body addr">
+        <input name="name" placeholder="이름" />
+        <input name="addr" placeholder="주소" />
+        <input name="tel" placeholder="전화번호" />
+        <button class="add">추가</button>
+      </div>
+    </section>
+    <footer>
+      <address>CopyRight &copy; callor@callor.com</address>
+    </footer>
+  </body>
+  <script src="js/main05.js"></script>
+</html>
