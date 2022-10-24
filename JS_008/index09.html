@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      section {
+        width: 50%;
+        /* 
+        모든 box tag 는 기본 position 이 relateve 이다
+        다른 tag 에 position 을 지정하여
+        tag 의 위치를 지정하고자 할때는
+        부모 역할을 수행하는  tag 에 position 을 relative 로
+        강제 설정해 주어야 한다
+        */
+        position: relative;
+        margin: 50px auto;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      img:nth-of-type(2) {
+        /*
+        relative 부모 tag 에 대하여 의존적으로 위치 설정하기
+        */
+        position: absolute;
+        /*
+        이 tag(img 2번째 tag)의 left 와 top 위치를
+        부모(relative 속이 있는 tag)의 left 와 top 에 맞추어라
+        */
+        left: 0;
+        top: 0;
+        display: none;
+      }
+      /*
+      만약 section box 에 hover 가 되면
+      두번째 img tag 에 style 을 지정하라
+      */
+      section:hover img:nth-of-type(2) {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <img src="images/bg_images_1.jpg" />
+      <img src="images/bg_images_2.jpg" />
+    </section>
+  </body>
+</html>

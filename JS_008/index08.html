@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        padding: 1.2rem;
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+
+        background-image: url("images/bg_images_1.jpg");
+        background-size: 100% 100%;
+        background-position: bottom;
+      }
+      nav {
+        background-color: #777;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+      }
+
+      /*
+      nav 메뉴에 마우스가 hover 되면
+      하단에 두꺼운 line 을 형성하여 보여주는 style 구현
+      이때 hover 에서 line 을 주면
+      마우스가 hover 되었을때 메뉴부분이 출렁거리는 현상이
+      나타난다
+      이 현상을 방지하기 위하여
+      기본 속성에 line 의 굵기 만큼 transparent 색상으로
+      border-bottom 을 설정해 둔다
+      */
+      li {
+        margin: 8px;
+        padding: 10px 16px 8px 16px;
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        background-color: inherit;
+        font-weight: 900;
+        /* 
+        기본 속성에서 hover 속성으로 변화가 일어날때
+        딜레이를 주어 조금 부드럽게 변화되도록 하는 기법
+        */
+        transition: border 0.5s, background-color 2s;
+      }
+      li:hover {
+        border-bottom: 3px solid rgb(208, 208, 37);
+        background-color: yellow;
+      }
+
+      footer {
+        background-color: #777;
+        font-size: 8px;
+        text-align: center;
+        padding: 0.9em;
+      }
+
+      section {
+        flex: 1;
+        /*
+        box 크기가 고정된 상태에서
+        내부의 content 가 box 크기보다 큰 경우
+        overflow 를 지정하면 box 내부에서 content가
+        머물도록 할 수 있다
+        hidden : box 보다 넘치는 content 를 잘라서 보이지 않게
+        scroll : 항상 scroll bar 가 보이도록
+        auto : content 가 넘치는 경우에만 scroll bar 가 나타나도록
+
+        overflow : width, height 에 모두 적용
+        overflow-y : height 에만 적용
+        overflow-x : width 에만 적용
+        */
+        overflow-y: auto;
+
+        display: flex;
+      }
+
+      div {
+        margin: 10px;
+        overflow: auto;
+      }
+
+      div:nth-of-type(1),
+      div:nth-of-type(3) {
+        flex: 1;
+      }
+
+      div:nth-of-type(2) {
+        flex: 3;
+      }
+
+      img {
+        float: left;
+        /* top, right, bottom, left */
+        margin: 0 10px 10px 0;
+        border-radius: 15px;
+      }
+      div:nth-of-type(1) img {
+        /* box 를 둥근 원으로 설정하기 */
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>반갑습니다</h1>
+      <p>나의 홈페이지에 오신것을 환영합니다</p>
+    </header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>공지사항</li>
+        <li>자유게시판</li>
+        <li>로그인</li>
+        <li>회원가입</li>
+      </ul>
+    </nav>
+    <section>
+      <div>
+        <img src="images/bg_images_2.jpg" width="100px" />
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum tempore
+        neque, sed animi possimus quae cum, impedit quisquam earum, incidunt
+        velit quo sunt. Natus tempore ratione, sequi necessitatibus laudantium
+        aut. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
+        tempore neque, sed animi possimus quae cum, impedit quisquam earum,
+        incidunt velit quo sunt. Natus tempore ratione, sequi necessitatibus
+        laudantium aut. Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Eum tempore neque, sed animi possimus quae cum, impedit quisquam
+        earum, incidunt velit quo sunt. Natus tempore ratione, sequi
+        necessitatibus laudantium aut.
+      </div>
+      <div>
+        <img src="images/bg_images_1.jpg" width="200px" />
+        감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으로 하며,
+        1차에 한하여 중임할 수 있다. 대법원장과 대법관이 아닌 법관은
+        대법관회의의 동의를 얻어 대법원장이 임명한다. 대법관의 임기는 6년으로
+        하며, 법률이 정하는 바에 의하여 연임할 수 있다. 국무위원은 국정에 관하여
+        대통령을 보좌하며, 국무회의의 구성원으로서 국정을 심의한다. 법관은
+        헌법과 법률에 의하여 그 양심에 따라 독립하여 심판한다. 대통령은 국가의
+        독립·영토의 보전·국가의 계속성과 헌법을 수호할 책무를 진다. 모든 국민은
+        소급입법에 의하여 참정권의 제한을 받거나 재산권을 박탈당하지 아니한다.
+        모든 국민은 주거의 자유를 침해받지 아니한다. 주거에 대한 압수나 수색을
+        할 때에는 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다.
+        감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으로 하며,
+        1차에 한하여 중임할 수 있다. 대법원장과 대법관이 아닌 법관은
+        대법관회의의 동의를 얻어 대법원장이 임명한다. 대법관의 임기는 6년으로
+        하며, 법률이 정하는 바에 의하여 연임할 수 있다. 국무위원은 국정에 관하여
+        대통령을 보좌하며, 국무회의의 구성원으로서 국정을 심의한다. 법관은
+        헌법과 법률에 의하여 그 양심에 따라 독립하여 심판한다. 대통령은 국가의
+        독립·영토의 보전·국가의 계속성과 헌법을 수호할 책무를 진다. 모든 국민은
+        소급입법에 의하여 참정권의 제한을 받거나 재산권을 박탈당하지 아니한다.
+        모든 국민은 주거의 자유를 침해받지 아니한다. 주거에 대한 압수나 수색을
+        할 때에는 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다.
+        감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으로 하며,
+        1차에 한하여 중임할 수 있다. 대법원장과 대법관이 아닌 법관은
+        대법관회의의 동의를 얻어 대법원장이 임명한다. 대법관의 임기는 6년으로
+        하며, 법률이 정하는 바에 의하여 연임할 수 있다. 국무위원은 국정에 관하여
+        대통령을 보좌하며, 국무회의의 구성원으로서 국정을 심의한다. 법관은
+        헌법과 법률에 의하여 그 양심에 따라 독립하여 심판한다. 대통령은 국가의
+        독립·영토의 보전·국가의 계속성과 헌법을 수호할 책무를 진다. 모든 국민은
+        소급입법에 의하여 참정권의 제한을 받거나 재산권을 박탈당하지 아니한다.
+        모든 국민은 주거의 자유를 침해받지 아니한다. 주거에 대한 압수나 수색을
+        할 때에는 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다.
+      </div>
+      <div>
+        국가의 세입·세출의 결산, 국가 및 법률이 정한 단체의 회계검사와 행정기관
+        및 공무원의 직무에 관한 감찰을 하기 위하여 대통령 소속하에 감사원을
+        둔다. 국회의원은 현행범인인 경우를 제외하고는 회기중 국회의 동의없이
+        체포 또는 구금되지 아니한다. 대통령이 궐위되거나 사고로 인하여 직무를
+        수행할 수 없을 때에는 국무총리, 법률이 정한 국무위원의 순서로 그 권한을
+        대행한다. 군인 또는 군무원이 아닌 국민은 대한민국의 영역안에서는 중대한
+        군사상 기밀·초병·초소·유독음식물공급·포로·군용물에 관한 죄중 법률이 정한
+        경우와 비상계엄이 선포된 경우를 제외하고는 군사법원의 재판을 받지
+        아니한다. 국가의 세입·세출의 결산, 국가 및 법률이 정한 단체의 회계검사와
+        행정기관 및 공무원의 직무에 관한 감찰을 하기 위하여 대통령 소속하에
+        감사원을 둔다. 국회의원은 현행범인인 경우를 제외하고는 회기중 국회의
+        동의없이 체포 또는 구금되지 아니한다. 대통령이 궐위되거나 사고로 인하여
+        직무를 수행할 수 없을 때에는 국무총리, 법률이 정한 국무위원의 순서로 그
+        권한을 대행한다. 군인 또는 군무원이 아닌 국민은 대한민국의 영역안에서는
+        중대한 군사상 기밀·초병·초소·유독음식물공급·포로·군용물에 관한 죄중
+        법률이 정한 경우와 비상계엄이 선포된 경우를 제외하고는 군사법원의 재판을
+        받지 아니한다. 국가의 세입·세출의 결산, 국가 및 법률이 정한 단체의
+        회계검사와 행정기관 및 공무원의 직무에 관한 감찰을 하기 위하여 대통령
+        소속하에 감사원을 둔다. 국회의원은 현행범인인 경우를 제외하고는 회기중
+        국회의 동의없이 체포 또는 구금되지 아니한다. 대통령이 궐위되거나 사고로
+        인하여 직무를 수행할 수 없을 때에는 국무총리, 법률이 정한 국무위원의
+        순서로 그 권한을 대행한다. 군인 또는 군무원이 아닌 국민은 대한민국의
+        영역안에서는 중대한 군사상 기밀·초병·초소·유독음식물공급·포로·군용물에
+        관한 죄중 법률이 정한 경우와 비상계엄이 선포된 경우를 제외하고는
+        군사법원의 재판을 받지 아니한다.
+      </div>
+    </section>
+    <footer>
+      <address>CopyRight &copy; callor@callor.com</address>
+    </footer>
+  </body>
+</html>

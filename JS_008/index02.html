@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      div {
+        border: 1px solid blue;
+      }
+
+      img.img1 {
+        /*
+        이미지와 text 를 조화롭게 화면에 표현하기 위한 style
+        */
+        float: right;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img class="img1" src="images/bg_images_1.jpg" width="100px" />
+      <p>
+        img tag 은 화면에 image 를 보여주기 위한 요소 img tag 의 src 속성을
+        통하여 이미지가 저장된 경로와 이미지의 이름, 확장까지 지정을 해주면
+        화면에 이미지를 표현할수 있다 기본 크기는 실제 이미지의 크기가 반영된다
+        보여지는 이미지의 크기는 width와 height 를 사용하여 조절할수 있다 단,
+        width와 height 를 사용하여 이미지 크기를 조절하여도 실제 이미지가 변하는
+        것은 아니다 UI 화면에서 이미지를 보이기 위해서는 가급적 실제 보이는
+        이미지와 원본 이미지의 크기를 일치 시키는 것이 좋다 큰 이미지를 가져오기
+        위해서는 그만큼 네트워크를 사용하여 데이터를 다운로드 하여야 하기 때문에
+        비효율적이다 단, 실제 원본 이미지는 보여지는 이미지 보다 약간 큰것이
+        좋다 약간 큰 이미지를 조금 줄여서 보여주면 선명도가 더 나이지기도 한다
+        이미크기에서 width 나 height 둘 중 한개를 사용하면 이미지의 비율에 따라
+        나머지 크기가 결정된다 width와 height 를 모두 설정하면 이미지 비율이
+        일그러지는 현상이 발생할 수 있다
+      </p>
+      <p>대한민국</p>
+    </div>
+    <div><img src="images/bg_images_2.jpg" height="150px" /></div>
+    <div>
+      <img src="images/bg_images_5.jpg" height="150px" alt="bg image 5" />
+      <p>
+        img tag 의 alt 속성은 이미지가 어떤 이유로 화면에 보이지 않을 경우
+        이미지에 대한 정보를 text 로 보여주기 위한 설정이다
+      </p>
+      <p>
+        웹 접근성 지침에서는 alt 속성을 반드시 작성하도록 하고 있다 그 이유는
+        청각장애인을 위한 화면 Reading SW 에서 이미지는 읽을 수 없지만 이미지
+        tag 의 alt 속성을 읽어주는 기능이 있기 때문에 필수로 사용해야하는
+        속성으로 지정하고 있다
+      </p>
+    </div>
+
+    <div><img src="images/bg_images_3.jpg" /></div>
+  </body>
+</html>

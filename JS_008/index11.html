@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      /* 
+      ellipsis 효과:말줄임표 
+      box 의 크기를 고정하고(px 로 설정하는 것이 더 정확)
+      white-space : nowrap
+      overflow : hidden
+      text-overflow : ellipsis 
+      */
+      div:nth-of-type(1) {
+        margin: 20px auto;
+        width: 20%;
+        border: 1px solid #aaa;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      div:nth-of-type(2) {
+        margin: 20px auto;
+        width: 20%;
+        border: 1px solid #aaa;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        /* 단어 단위로 줄바꿈을 하라 */
+        word-wrap: break-word;
+
+        /*
+        한 라인의 높이를 1.2em 으로하고
+        3라인을 표현해야 하기 때문에 box 의 heigith 1.2 * 3 으로
+        */
+        line-height: 1.2em;
+        height: 3.6em;
+
+        /*
+        실험적인(공식적이 아닌) 속성
+        이 속성을 적용하면 멀티라인 ellipsis 효과를
+        낼수 있다
+        */
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* 라인수 */
+        -webkit-box-orient: vertical;
+      }
+    </style>
+  </head>
+  <body>
+    <div>나는 자랑스러운 태극기앞에 조국과 민족의 무궁한</div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam est
+      voluptatibus eius vel temporibus explicabo aliquam quidem ipsam placeat
+      nostrum et unde, non, minima voluptatum accusantium! Accusamus officiis
+      exercitationem quaerat.
+    </div>
+  </body>
+</html>

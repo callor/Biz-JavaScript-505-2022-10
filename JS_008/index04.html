@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        height: 100%;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      div {
+        width: 100%;
+        height: 50%;
+        border: 1px solid #bbb;
+      }
+
+      div:nth-of-type(1) {
+        /* 
+        box tag 의 배경을 이미지로 채우기 
+        이미지로 채워진 배경은 content 와 별개로 작동한다
+        content 에 별로 영향을 미치지 않는다
+        */
+        background-image: url("images/bg_images_1.jpg");
+
+        /*
+        background-size 설정
+        auto : 기본값으로 원본 image 크기를 그대로 표현
+        contain : 지정한 요소안에 배경 이미자 가득 차 도록 
+                    확대, 축소하여 표현
+                box 보다 이미지가 클때 주로 사용
+        cover : 지정한 요소를 다 덮도록 이미지를 확대, 축소
+                box 보다 이미지가 작을때 주로 사용
+        px 값으로 지정 : 임의의 width, height 를 지정하는 방법
+        % 값으로 지정 : 임의의 width, height 를 지정하는 방법
+        */
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        color: white;
+        text-align: center;
+      }
+
+      div:nth-of-type(2) {
+        background-image: url("images/bg_images_2.jpg");
+        /* 
+        단순 배경이 아닌 사물이 포함된 경우 100% 한개만 사용하면
+        이미지 왜곡을 다소 줄일 수 있다
+        */
+        background-size: 100%;
+        /*
+        parallex 효과 :
+        background-size 를 100%으로 설정하여
+        background-attachment 를 fixed로 설정하면
+        box 가 위아래 스크롤 될때 내부의 이미지는 고정된
+        상태로 유지된다
+        */
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>안녕하세요</h1>
+      <p>여기는 background-image 가 설정된 영역입니다</p>
+    </div>
+    <div></div>
+    <div></div>
+  </body>
+</html>
