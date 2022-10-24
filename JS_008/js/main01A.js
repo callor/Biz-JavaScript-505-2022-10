@@ -166,34 +166,40 @@ document.addEventListener("DOMContentLoaded", () => {
       const tr = document.createElement("TR");
 
       // score 항목들을 TD 에 담기
-      let td = document.createElement("TD");
-      td.textContent = score.num;
-      tr.appendChild(td);
+      /**
+       *  Object.values(객체)
+       *  객체의 변수들만 getter 하여 
+       *  변수의 값들을 배열로 만들어주는 함수
+       *  scores = [
+       *    {
+       *      num:"1",
+       *      name:"홍길동",
+       *      kor:90,
+       *      eng:80;
+       *      math:70,
+       *      sc_total : 240, 
+       *      sc_avg:80
+       *    },
+       *    {
+       *      num:"2",
+       *      name:"이몽룡",
+       *      kor:90,
+       *      eng:80;
+       *      math:70,
+       *      sc_total : 240, 
+       *      sc_avg:80
+       *    }
 
-      td = document.createElement("TD");
-      td.textContent = score.name;
-      tr.appendChild(td);
 
-      td = document.createElement("TD");
-      td.textContent = score.kor;
-      tr.appendChild(td);
-
-      td = document.createElement("TD");
-      td.textContent = score.eng;
-      tr.appendChild(td);
-
-      td = document.createElement("TD");
-      td.textContent = score.math;
-      tr.appendChild(td);
-
-      td = document.createElement("TD");
-      td.textContent = score.sc_total;
-      tr.appendChild(td);
-
-      td = document.createElement("TD");
-      td.textContent = score.sc_avg;
-      tr.appendChild(td);
-
+      *  ]
+       * 
+       * */
+      const scoreValues = Object.values(score);
+      for (let j = 0; j < scoreValues.length; j++) {
+        const td = document.createElement("TD");
+        td.textContent = scoreValues[j];
+        tr.appendChild(td);
+      }
       tbodyScore.appendChild(tr);
     }
   };

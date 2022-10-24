@@ -115,10 +115,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 점수 input 데이터를 가져와서 총점 계산
     let sc_total = 0;
-    for (let i = 0; i < inputScores.length; i++) {
-      const input = inputScores[i];
+    inputScores.forEach((input) => {
       sc_total += Number(input.value);
-    }
+    });
     // 평균계산하기
     // 평균은 반드시 전체 총 합이 계산이 완료된 후 실행한다
     // 총점을 계산하는 for() 반복문내에서 계산하면
@@ -166,34 +165,40 @@ document.addEventListener("DOMContentLoaded", () => {
       const tr = document.createElement("TR");
 
       // score 항목들을 TD 에 담기
-      let td = document.createElement("TD");
-      td.textContent = score.num;
-      tr.appendChild(td);
+      /**
+       *  Object.values(객체)
+       *  객체의 변수들만 getter 하여 
+       *  변수의 값들을 배열로 만들어주는 함수
+       *  scores = [
+       *    {
+       *      num:"1",
+       *      name:"홍길동",
+       *      kor:90,
+       *      eng:80;
+       *      math:70,
+       *      sc_total : 240, 
+       *      sc_avg:80
+       *    },
+       *    {
+       *      num:"2",
+       *      name:"이몽룡",
+       *      kor:90,
+       *      eng:80;
+       *      math:70,
+       *      sc_total : 240, 
+       *      sc_avg:80
+       *    }
 
-      td = document.createElement("TD");
-      td.textContent = score.name;
-      tr.appendChild(td);
 
-      td = document.createElement("TD");
-      td.textContent = score.kor;
-      tr.appendChild(td);
-
-      td = document.createElement("TD");
-      td.textContent = score.eng;
-      tr.appendChild(td);
-
-      td = document.createElement("TD");
-      td.textContent = score.math;
-      tr.appendChild(td);
-
-      td = document.createElement("TD");
-      td.textContent = score.sc_total;
-      tr.appendChild(td);
-
-      td = document.createElement("TD");
-      td.textContent = score.sc_avg;
-      tr.appendChild(td);
-
+      *  ]
+       * 
+       * */
+      const scoreValues = Object.values(score);
+      scoreValues.forEach((value) => {
+        const td = document.createElement("TD");
+        td.textContent = value;
+        tr.appendChild(td);
+      });
       tbodyScore.appendChild(tr);
     }
   };
