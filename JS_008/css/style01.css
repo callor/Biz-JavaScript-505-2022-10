@@ -1,0 +1,64 @@
+section.main {
+  flex: 1;
+}
+
+header {
+  background-color: rgb(42, 223, 75);
+  color: white;
+  text-align: center;
+  padding: 1em;
+  text-shadow: 1px 1px 1px black;
+
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+section.main table,
+section.main div {
+  width: 80%;
+  margin: 10px auto;
+}
+table {
+  /* cell 과 cell 사이의 간격을 없애서 실선으로 보이게 */
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+
+  /* 각 cell 에 표시된 text 를 한줄로 표현하기 */
+  white-space: nowrap;
+  padding: 5px;
+  text-align: left;
+}
+
+div.input_score {
+  border: 1px solid #aaa;
+  display: flex;
+}
+
+div.input_score input {
+  flex: 1px;
+  padding: 8px;
+  margin: 5px;
+}
+
+div.input_score button {
+  padding: 12px 16px;
+  margin: 5px;
+  border: none;
+  outline: none;
+  white-space: nowrap;
+}
+div.input_score button:hover {
+  background-color: #bbb;
+  color: blue;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+button.score_add {
+  background-color: blue;
+  color: white;
+}

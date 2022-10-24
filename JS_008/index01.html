@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고려고등학교</title>
+    <link rel="stylesheet" href="css/init.css" />
+    <link rel="stylesheet" href="css/style01.css" />
+  </head>
+  <body>
+    <header>
+      <h1>고려고등학교</h1>
+      <p>고려고등학교 성적처리 2022</p>
+    </header>
+    <section class="main">
+      <table>
+        <thead>
+          <tr>
+            <th>학번</th>
+            <th>이름</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+            <th>총점</th>
+            <th>평균</th>
+          </tr>
+        </thead>
+        <tbody class="score"></tbody>
+      </table>
+      <div class="input_score">
+        <input name="sc_num" placeholder="학번" />
+        <input name="sc_name" placeholder="이름" />
+        <input
+          class="sc_score"
+          name="sc_kor"
+          type="number"
+          placeholder="국어"
+        />
+        <input
+          class="sc_score"
+          name="sc_eng"
+          type="number"
+          placeholder="영어"
+        />
+        <input
+          class="sc_score"
+          name="sc_math"
+          type="number"
+          placeholder="수학"
+        />
+        <button class="score_add">추가</button>
+      </div>
+    </section>
+    <footer>
+      <address>CopyRight &copy; callor@callor.com</address>
+    </footer>
+  </body>
+</html>

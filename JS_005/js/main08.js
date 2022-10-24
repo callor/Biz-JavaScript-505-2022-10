@@ -35,8 +35,9 @@ btnOk?.addEventListener("click", () => {
   spans[index[txtName]].innerText = inputs[index[txtName]].value;
 
   // for() 반복문을 이용하여 input 전체 내용을 span 에 모두 보여주기
+  let sum = 0;
   for (let i = 0; i < inputs.length; i++) {
-    const txtName = inputs[i].name;
-    spans[index[txtName]].innerText = inputs[index[txtName]].value;
+    sum = i + 1;
   }
+  console.log(sum);
 });
