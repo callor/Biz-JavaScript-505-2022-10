@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+  </head>
+  <body></body>
+  <script>
+    const 성춘향 = {
+      이름: "성춘향",
+      나이: 16,
+      주소: "남원시",
+    };
+
+    // 객체의 분해( distructure )
+    // 이름, 나이, 주소 변수를 선언하고
+    // 이름 = 성춘향.이름, 주소 = 성춘향.주소, 나이 = 성춘향.나이
+    // 코드를 실행하여 각 속성을 변수에 저장하라
+    const { 이름, 나이, 주소 } = 성춘향;
+    document.writeln(이름, 나이, 주소);
+
+    const score = [90, 80, 77, 60, 100, 90, 95];
+    console.log(score);
+    // 원본인 score 배열의 0 index 값부터 3 index 값까지
+    // 잘라서 subScore에 저장하라
+    const subScore = score.slice(0, 3);
+    console.log(subScore);
+  </script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+  </head>
+  <body></body>
+  <script>
+    // 이름, 나이, 주소 속성(property)을 포함하는
+    // 홍길동 객체(JSON object)를 생성
+    const 홍길동 = {
+      이름: "홍길동",
+      나이: 33,
+      주소: "서울특별시",
+    };
+
+    console.table(홍길동);
+    // 홍길동 객체를 학생 변수에 복사
+    // 홍길동 은 객체(object) 이기 때문에 주소만 복사가 된다
+    // 즉, 객체도 참조형 변수이다
+    const 학생 = 홍길동;
+    console.table(학생);
+    // 학생 객체의 이름을 변경하면
+    // 원본인 홍길동 객체의 이름도 같이 변경된다
+    학생.이름 = "이몽룡";
+    console.table(홍길동);
+
+    // 홍길동 객체의 속성(property, 이름, 나이, 주소)을
+    // 각각 개별 변수에 저장하기
+    // 이때는 각 속성의 실제 값이 그대로 변수에 복사된다
+    // 이름, 나이, 주소 변수는 primitive 형 변수로 생성된다
+    let 이름 = 홍길동.이름;
+    let 나이 = 홍길동.나이;
+    let 주소 = 홍길동.주소;
+
+    console.log(이름, 나이, 주소);
+    // 이름 변수의 데이터를 성춘향으로 변경해도
+    // 홍길동 객체의 이름 속성은 변경되지 않는다
+    이름 = "성춘향";
+    console.log(이름, 나이, 주소);
+    console.table(홍길동);
+  </script>
+</html>
