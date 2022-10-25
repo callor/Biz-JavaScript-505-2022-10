@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+  </head>
+  <body></body>
+  <script>
+    // const fun1 : fun1 이라는 함수를 선언하겠다
+    // () : 함수의 시작
+    // => {} : 함수의 몸체
+    const fun1 = () => {};
+    // num : 값을 전달받을 매개변수, 파라메터, 아규먼트
+    const fun2 = (num) => {
+      return num * 2;
+    };
+    // lambda 코드
+    // 함수의 몸체 코드블럭에 단 한 라인의 코드만 있고
+    // 그 코드가 return 명령일때
+    // {} 과 return 키워드를 생략할수 있다
+    const fun3 = (num1, num2) => num1 + num2;
+
+    let result = fun3(100, 200);
+    document.writeln("결과 ", result);
+    console.log("결과", result);
+  </script>
+</html>

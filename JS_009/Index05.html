@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+  </head>
+  <body></body>
+  <script>
+    /**
+     * JS 호이스팅 :
+     * function 키워드로 선언된 함수는
+     * 코드가 실행되기 전에 코드를 재 배열하여
+     * 함수를 script 상단으로 끌어 올리기를 한다
+     * 코드가 전체적으로 재 배열이 이루지기 때문에
+     * 처음 실행할때 다소 비효율적인 부분이 작동된다
+     */
+    // 아직 선언되지 않은 numAdd() 함수 호출
+    let result = numAdd(200, 300);
+    document.writeln(result);
+
+    // numAdd() 함수는 호출되는 코드보다 나중에 선언되어 있다
+    function numAdd(num1, num2) {
+      return num1 + num2;
+    }
+
+    // 호출코드보다 함수 선언이 나중에 나온경우
+    result = numMulti(num1, num2);
+    // 함수 = () => {  } : 화살표 함수, ES5 이상에서 사용
+    // 이 함수 선언문은 호이스팅이 일어나지 않는다
+    // 권장 : 함수는 사용하기(호출하기) 전에
+    //      반드시 먼저 선언하자
+    const numMulti = (num1, num2) => {
+      return num1 + num2;
+    };
+  </script>
+</html>

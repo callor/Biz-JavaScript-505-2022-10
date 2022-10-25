@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+  </head>
+  <body>
+    <h1>어떤 숫자들의 덧셈 계산</h1>
+  </body>
+  <script>
+    // 임의의 두 수의 덧셈을 계산하는 코드
+    let num1 = 100;
+    let num2 = 200;
+    let sum = num1 + num2;
+
+    num1 = 200;
+    num2 = 300;
+    sum = num1 + num2;
+
+    num1 = 10;
+    num2 = 20;
+    sum = num1 + num2;
+
+    // 함수 numAdd() 를 선언하기(생성하기)
+    /**
+     * 어딘선가 numAdd() "함수를 호출"하면서
+     * 두개의 숫자를 "전달한다"
+     * 그러면 numAdd() 함수의 코드블럭({  })에서
+     *      두 숫자를 덧셈하고
+     *      덧셈한 "결과를 return" 하도록 한다
+     *
+     * 어디선가 numAdd() "함수를 호출"하면서
+     * 두개의 숫자를 "전달하면"
+     * 각각 "변수 num1, num2 에 저장"하라
+     * 각 변수 num1 과 num2 에 저장된 값을 덧셈하여
+     * 결과를 return 하라
+     *
+     * 이때 numAdd(num1, num2) 코드에서 num1 과 num2 변수를
+     *      "매개변수", "parameter:파라메터",
+     *      "argument:아규먼트"라고 부른다
+     *
+     */
+    function numAdd(num1, num2) {
+      return num1 + num2;
+    }
+
+    /**
+     * numAdd() 함수에게 숫자 100과 200을 "전달하고"
+     * numAdd()의 코드가 실행된 후 "return 명령이 실행"되면
+     * 그 "결과를 sum 변수에 저장"하라
+     */
+    sum = numAdd(100, 200);
+
+    /**
+     * 이 코드가 실행되면
+     * function num(num1 = 200, num2 = 300) 과 같이
+     * 코드가 만들어진다 라고 생각하면 된다
+     *
+     */
+    sum = numAdd(200, 300);
+    sum = numAdd(10, 20);
+  </script>
+</html>

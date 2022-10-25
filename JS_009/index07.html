@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+  </head>
+  <body>
+    <h1 class="h1">클릭하세요</h1>
+  </body>
+  <script>
+    // "기본형(primitive) 변수의 값 복사
+    let num1 = 100;
+    // num1 변수에 저장된 값(100)을 num2 에 복사한다
+    let num2 = num1;
+    num2 = 300;
+    // num2 에 300을 저장했지만 결과는 num1 에 아무런 영향을
+    // 미치지 못하여 출력결과는 num1 의 값이 100이 표시된다
+    document.writeln(num1);
+
+    // 참조형(Reference 형) 변수
+    // 화면에 있는 h1 tag 정보를 h1 변수에 보관하기
+    // 이 코드는 화면의 h1 tag 정보를 h1 변수에 복사하는 것이 아니다
+    // 어딘가에 h1 tag 정보가 저장된 기억장소의 주소만
+    // h1 에 보관된다
+    // h1.textContext = "우리나라" 라는 코드가 실행되면
+    // 어딘가에 저장된 h1 tag 정보의 textContext 가 변경된다
+    const h1 = document.querySelector("h1.h1");
+    console.dir(h1);
+
+    // arr1 배열 선언하고 값 저장
+    const arr1 = [1, 2, 3, 4, 5, 6];
+    // arr2 배열을 선언하고 arr1 을 복사하기(저장하기)
+    const arr2 = arr1;
+    // 내용 출력
+    console.log("arr1", arr1);
+    console.log("arr2", arr2);
+
+    // arr2 의 3번 index 위치의 값을 300으로 변경
+    arr2[3] = 100;
+    // arr1, arr2 의 동일 index 위치의 값이 변경
+    console.log("arr1", arr1);
+    console.log("arr2", arr2);
+
+    /**
+     * 참조형(Reference 형) 변수
+     * 참조형 변수는 원본의 내용이 복사되는 것이 아니고
+     * 원본이 저장된 기억장소의 주소만 변수에 저장된다
+     * 복사된 변수의 요소(속성)을 변경하면
+     * 원본의 내용이 변경된다
+     * 한편 많이 편리한 기능이지만
+     * 잘못 다루면 원본 데이터를 손상시킬수 있다
+     */
+  </script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+  </head>
+  <body></body>
+  <script>
+    // 함수선언 : 이 코드는 아무런 반응이 없는 상태
+    function numAdd(num1, num2) {
+      let sum = num1 + num2;
+      return sum;
+    }
+    // 함수호출 : 비로소 numAdd() 함수가 반응을 할수 있는 시기
+    // 함수가 호출되면 numAdd() { }의 코드블럭( {} )내부의
+    //      코드가 실행된다
+    let result = numAdd(200, 300);
+
+    // Math 라는 클래스(패키지, 묶음)에 들어있는
+    // random() 함수를 호출하여 그 함수가 return 하는 값을
+    // rndNum 변수에 받겠다(저장해 놓겠다)
+    let rndNum = Math.random();
+    rndNum *= 10; // rndNum = rndNum * 10
+
+    /**
+     * Math.floor() 함수야 내가 rndNum 변수에 저장된 값을
+     * 너에게 전달하니 너의 코드( {} )를 실행하고
+     * 그 최종 결과를 return 해죠 라는 호출(요청)
+     *
+     * Math.floor() 가 return 한 결과를 intRndNum 에 받겠다
+     */
+    let intRndNum = Math.floor(rndNum);
+    /**
+     * document 객체(browser 화면)에 준비되어 있는(들어있는)
+     * writeln() 함수에게 intRndNum 변수에 저장된 값을
+     * 전달하고 처리를 해죠 라고 요청을 한다
+     * 요청을하고 처리된 결과는 "나는 관심 없어~~"
+     */
+    document.writeln(intRndNum);
+  </script>
+</html>

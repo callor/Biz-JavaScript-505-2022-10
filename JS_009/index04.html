@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+  </head>
+  <body></body>
+  <script>
+    function numAdd(num1, num2) {
+      return num1 + num2;
+    }
+    // numAdd() 함수야 100과 200 숫자를 전달하니 연산을 수행해
+    // 그리고 결과는 필요 없어~~
+    numAdd(100, 200);
+
+    // numAdd() 함수를 호출하면서 아무런 값도 전달하지 않기
+    // numAdd(num1 = undefined, num2 = undefined) 처럼
+    //      코드가 실행된다
+    // 결국 return undefined + undefined 가 실행되고
+    // return undefined 가 실행될때 return NaN 로 변환되어
+    // 실행된다
+    // 그결과를 저장한 result 의 값이 NaN 이 된다
+    let result = numAdd();
+    document.writeln(result);
+  </script>
+</html>
