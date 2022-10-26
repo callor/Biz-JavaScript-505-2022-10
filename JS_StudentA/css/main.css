@@ -1,0 +1,67 @@
+header {
+  background-color: #bbb;
+  color: white;
+  text-align: center;
+  /*
+    header 의 height 를 설정하지 않은 상태에서
+    header 의 padding 조금 크게 주면
+    박스의 내부에 padding(공기주입)이 일어나서
+    내부의 content 가 세로 중앙 정렬되는 효과를 볼수 있다
+  */
+  padding: 1.2em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+div {
+  width: 70%;
+  margin: 10px auto;
+  border: 1px solid #bbb;
+  display: flex;
+  justify-content: center;
+}
+
+div.input input,
+div.input button {
+  flex: 1;
+  white-space: nowrap;
+  margin: 5px;
+  padding: 8px;
+  max-width: 120px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+div.input input {
+  border: 1px solid #eee;
+}
+
+div.input input:hover {
+  background-color: #eee;
+}
+
+div.input input:focus {
+  background-color: #ccc;
+}
+
+div.input button {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+div.input button:hover {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+div.view table {
+  width: 90%;
+}
+
+div.view th,
+div.view td {
+  text-align: left;
+  padding: 8px;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+}
