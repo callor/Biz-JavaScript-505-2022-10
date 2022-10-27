@@ -4,7 +4,7 @@
 // ES5 이후의 module 방식
 import http from "http";
 const host = "127.0.0.1";
-const port = 3000;
+const port = 5000;
 
 /**
  * Number() 함수가 실행되어 결과를 만들고
