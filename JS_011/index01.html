@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <!-- w3css.css 를 CDN 방식으로 사용하도록 설정 -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <style>
+      html {
+        height: 100vh;
+      }
+      body {
+        height: 100%;
+      }
+      .ch-flex {
+        display: flex;
+      }
+      .ch-flex-column {
+        flex-direction: column;
+      }
+      .ch-flex-center {
+        justify-content: center;
+        align-items: center;
+      }
+      .ch-padding-1em {
+        padding: 1em;
+      }
+      .ch-padding-05em {
+        padding: 0.5em;
+      }
+
+      section.main {
+        flex: 1;
+      }
+
+      div.subject {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body class="ch-flex ch-flex-column">
+    <header class="w3-container w3-teal w3-center ch-padding-1em">
+      <h1>w3css 사용해보기</h1>
+    </header>
+    <section class="w3-container main">
+      <button class="w3-button w3-blue w3-round-xlarge">나는 버튼</button>
+      <div class="w3-card-4 subject">
+        <div class="w3-container w3-teal">
+          <h1>반갑습니다</h1>
+        </div>
+        <div class="w3-container">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, quas,
+          temporibus cupiditate dolore itaque eligendi officia doloribus
+          accusantium dolorem aliquid error architecto ducimus ex eveniet
+          dolores cumque neque eaque pariatur?
+        </div>
+        <div class="w3-container w3-blue">
+          <h5>CopyRight &copy; callor@callor.com</h5>
+        </div>
+      </div>
+    </section>
+    <footer class="w3-container w3-black w3-center ch-padding-05em">
+      <address>CopyRight &copy; callor@callor.com</address>
+    </footer>
+  </body>
+</html>
