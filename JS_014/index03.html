@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      section {
+        width: 90%;
+        height: 90%;
+        border: 1px solid blue;
+        /*
+        css2(3) 에서 사용하는 flex, grid 
+        flex : 1차원(가로, 세로) 방향으로 item 들을 적절하게 배치하는 용도
+        grid : 2차원 가로, 세로방향을 동시에 지정하여 item 들을 배치하는 용도
+        
+        grid container : display 가 grid 로 설정된 box
+        grid item : grid container 가 감싸고 있는 tag 들
+        */
+        display: grid;
+        /* 
+        grid-item 들을 3개의 column으로 배치하라 각각 column 크기를 자동으로
+        각 칼럼의 width 값을 지정하고, 필요한 개수만큼 나열하면
+        화면의 전체 width 배율에 따라 적절하게 배치를 한다
+        */
+        grid-template-columns: auto auto auto;
+        grid-template-columns: 100px 200px 150px 50px;
+        /* fr(fraction) : grid 에서만 사용되는 단위, 단편화 */
+        grid-template-columns: 1fr 2fr 1fr 3fr 2fr;
+        /* 같은(균등한) 비율로 여러개의 칼럼을 배치하고자 할때 */
+        grid-template-columns: repeat(5, 1fr);
+        /* 
+        minxmax(min, max) 화면비율이 변경될 때
+        가장 작은 크기는 min 보다 크게, 화면이 줄어들때 min 크기까지만 줄이기
+        가장 큰 크기는 max 보다 작게, 화면이 늘어날때 max 크기까지만 늘리기
+        */
+        grid-template-columns: repeat(5, minmax(100px, 200px));
+        /*
+        화면이 줄어들때는 width 가 200px 까지만 줄고 유지하기
+        화면이 늘어날때는 맘대로 하세요
+        */
+        grid-template-columns: repeat(5, minmax(200px, auto));
+
+        /* 최소크기 20% 로 지정 : 한개의 item width 20% 로 지정 */
+        /* 화면 크기를 잘 계산하여 item들을 가득 채워라 */
+        /* 한개 item 크기를 20% 로 지정하여 5개의 item 을 배치하라 */
+        grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+
+        /*
+        grid item 들을 배치할때
+        grid item 에 margin 이 있을 경우 실제 크기를 
+        margin 까지 포함하여 계산을 한다
+        원하는 개수로 배치하는 것이 자연스럽다
+
+        gap 을 주게 되면
+        화면 전체 width 에서 gap 만큼 없다고 생각하고
+        item 들을 배치한다
+        사이즈를 auto 로 설정하는 경우 실제 원하는 개수보다 작게
+        배치되는 경우가 발생한다
+        */
+        row-gap: 10px;
+        column-gap: 5px;
+
+        /*
+        row-gap, column-gap 을 지원하지 않는 브라우저와 호환성을
+        주기 위해서 사용하는 임시 속성
+        */
+        -ms-grid-row-align: 10px;
+        -ms-grid-column-gap: 5px;
+
+        /* row : 10px, column 5px */
+        gap: 10px 5px;
+      }
+
+      article {
+        border: 1px solid green;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+    </section>
+  </body>
+</html>
