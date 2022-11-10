@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      /*
+      html 코드를 작성할때
+      box(frame) 의 크기를 지정할때
+      width, height 를 사용하는데
+      width 는 % vw 를 사용하면 화면 가로비율에 따라 적절하게 크기를
+      조절할수 있다
+      height 는 가끔 %나 vh 를 사용하면 높이가 지정이 안되는 경우가 있다
+      %나 vh 는 자신을 감싸고 있는 또다른 parent frame(box)의 높이에 비례하여
+      표시를 하는데, parent frame 의 height 가 명확하지 않을 경우
+      그러한 현상이 발생한다.
+      그러한 현상이 발생할때는 html 과 body 의 height 속성을 지정해 주면된다
+      */
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      /*
+      container(frame, parent box)
+      다른 box, tag item 들을 감싸고 있는 box
+      1. body container 를 flex 로 설정을 한다
+      2. body container 가 감싸고 있는 section 은 flex-item 으로 설정된다
+      3. flex-item 으로 설정된 tag 들은
+            기본적으로 inline-block 속성을 갖게 된다
+      4. body container 의 justify-content 와
+            align-items 속성을 center 로 지정하면
+        flex-item 들이 가로, 세로 중앙 정렬이 된다.
+      5. flex-box 의 속성들 중에
+        가. flex-direction :
+            가로로 배치(기본값, row),
+            세로로 배치(column)
+        나. flex-wrap: 
+            nowrap(기본값) : 가로나 세로방향으로 flex-item 이 가득찼을때
+                화면의 width, height 가 변경되었을대 flex-item 을 한줄로
+                그대로 유지하기
+            wrap : 가로, 세로방향으로 flex-item 이 가득찼을때
+                화면으 width 가 변경되면 flex-item 을 자동으로 줄바꿈하기
+        6. flex-item 의 속성들 중에
+            가. flex :
+                flex-item 의 크기를 비율로 배치하기
+                여러개의 flex-item 에 각각의 비율로 설정할수 있다
+                여러개의 flex-item 중에 특정한 1개의 item 을 1 로 설정하고
+                    나머지 flex-item 을 설정하지 않으면
+                    flex 값을 지정한 flex-item 이 가장 크게 배치되어
+                    화면의 width 를 조절할때 가로, 세로 가득찬 화면을 
+                    구현할수 있다
+
+            나. margin-left :
+                여러개의 flex-item 들이 가로 배치가 되었을때
+                flex 속성이 지정되지 않았을때
+                특정한 flex-item 에 margin-left 를 auto 로 지정하면
+                그 flex-item 부터 오른쪽으로 정렬이 된다
+      */
+      body {
+        display: flex;
+        justify-content: center;
+        /*
+        가로방향 배치를 할때 flex-item 들을 균등하게 배열하는 속성
+        이 속성을  순전히 flex 에게 배열을 맡기는 것
+        justify-content: space-between;
+        justify-content: space-around;
+        */
+        align-items: center;
+        flex-direction: column;
+      }
+      section {
+        width: 80%;
+        height: 80%;
+        border: 1px solid blue;
+        margin: 20px auto;
+        display: flex;
+      }
+
+      article {
+        border: 1px solid green;
+        margin: 5px;
+        flex: 1;
+      }
+
+      aside {
+        border: 1px solid red;
+        width: 100px;
+        margin: 5px;
+      }
+
+      aside:nth-of-type(2) {
+        margin-left: auto;
+      }
+      aside:nth-of-type(3) {
+        margin-left: auto;
+      }
+      aside:nth-of-type(4) {
+        margin-left: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+    </section>
+    <section>
+      <aside></aside>
+      <aside></aside>
+      <aside></aside>
+      <aside></aside>
+      <aside></aside>
+    </section>
+  </body>
+  <script>
+    const articles = document.querySelectorAll("article");
+    const asides = document.querySelectorAll("aside");
+    const style = {
+      display: "flex",
+      "justify-content": "center",
+      "align-items": "center",
+      color: "blue",
+      "font-size": "20px",
+    };
+
+    articles.forEach((article) => {
+      const num = Math.floor(Math.random() * 100) + 1;
+      Object.assign(article.style, style);
+      article.textContent = num;
+    });
+    asides.forEach((aside) => {
+      const num = Math.floor(Math.random() * 100) + 1;
+      Object.assign(aside.style, style);
+      aside.textContent = num;
+    });
+  </script>
+</html>

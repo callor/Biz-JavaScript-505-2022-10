@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        height: 100vh;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      section {
+        border: 1px solid blue;
+        flex: 1;
+        margin: 10px;
+        display: grid;
+        /* fr : fraction(파편, 분할, 배분) , grid box 에서만 사용하는 속성 */
+        grid-template-columns: 1fr 2fr 3fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+
+      article {
+        border: 1px solid blue;
+        height: 100px;
+        width: 100px;
+        /* 
+        실제 표현되는 text 와 관계없이 
+        text 의 가상 높이를 설정하는 속성 
+        text 를 box 의 세로 중앙 정렬을 할때 사용하는 tip
+        */
+        line-height: 100px;
+        text-align: center;
+        /*
+        box 의 width와 height 를 같은 크기로 지정하고
+        border-radius 를 조정하면 둥근 box 를 만들수 있다
+        radius 를 50% 로 지정하면 정 원 모양의 box 를 만들수 있다
+        이때 원 box 의 중앙에 text 를 배치하고 싶으면
+        text-align :center, line-height 를 box 의 height 와 같은 값으로 설정
+        */
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+    </section>
+  </body>
+  <script>
+    const articles = document.querySelectorAll("article");
+    articles.forEach((article) => {
+      const num = Math.floor(Math.random() * 100) + 1;
+      article.textContent = num;
+    });
+  </script>
+</html>
