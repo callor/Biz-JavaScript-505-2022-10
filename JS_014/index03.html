@@ -84,6 +84,23 @@
 
         /* row : 10px, column 5px */
         gap: 10px 5px;
+
+        /*
+        grid-template-column 은 item 의 개수를 지정하고
+        배치를 하면 가로방향으로 item 의 전체 width 합이 
+        화면의 width 합보다 크면 자동으로 wrap 이된다
+        auto wrap 이 된 item 들은 column 으로 지정한 비율만큼
+        자동으로 배치된다
+
+        그에 비해 grid-template-rows 는 다소 특성이 다르다
+        아래 코드처럼 2개의 rows 를 지정하면 첫줄, 두번째 줄은
+        각각 속성이 적용되고
+        이후에 나타나는 row  들은 (system)맘대로 배치된다
+
+        rows 를 지정하는 것보다는 item 의 heigh 를 지정하여 
+        배치하는 것이 좀더 자연스러운 배치가 되더라
+        */
+        grid-template-rows: 100px 200px;
       }
 
       article {
@@ -94,6 +111,11 @@
   </head>
   <body>
     <section>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
       <article></article>
       <article></article>
       <article></article>
