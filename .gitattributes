@@ -1,0 +1,3 @@
+*.md linguist-vendored
+*.json linguist-vendored
+*.java linguist-vendored
